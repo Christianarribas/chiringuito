@@ -79,3 +79,14 @@ p.pendiente { margin: 8px 0; }
   .tarjeta { flex: 1; }
   .galeria { grid-template-columns: repeat(3, 1fr); }
 }
+
+
+/* Botones Llamar / Cómo llegar */
+.contacto { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.boton-contacto { width: 100%; max-width: 280px; text-align: center; background: transparent; border: 1px solid var(--dorado); }
+/* Sin dato real todavía: botón apagado */
+.boton-contacto.pendiente-dato { opacity: 0.55; font-style: italic; cursor: not-allowed; }
+@media (min-width: 700px) {
+  .contacto { flex-direction: row; justify-content: center; }
+  .boton-contacto { width: auto; }
+}
