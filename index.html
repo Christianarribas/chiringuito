@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chiringuito - Pinchos y bebidas en Portugalete</title>
+  <meta name="description" content="Bar Chiringuito, zona Repelega, Portugalete. Pinchos y bebidas.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="chiringuito">
+
+  <header class="hero">
+    <p class="hero-kicker">Portugalete · Repelega</p>
+    <h1>Chiringuito</h1>
+    <p class="hero-sub">Pinchos y bebidas</p>
+    <p id="estado" class="estado" aria-live="polite"></p>
+    <a class="boton" href="#horario">Ver horario</a>
+  </header>
+
+  <nav class="menu" aria-label="Secciones">
+    <a href="#carta">Carta</a>
+    <a href="#horario">Horario</a>
+    <a href="#fotos">Fotos</a>
+    <a href="#donde">Dónde estamos</a>
+  </nav>
+
+  <main>
+    <section id="carta">
+      <h2>Carta</h2>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <h3>Pinchos</h3>
+          <p class="pendiente">[PENDIENTE: lista de pinchos y precios]</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Bebidas</h3>
+          <p class="pendiente">[PENDIENTE: lista de bebidas y precios]</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="horario">
+      <h2>Horario</h2>
+      <table class="tabla-horario">
+        <thead>
+          <tr><th>Día</th><th>Mañana</th><th>Tarde</th></tr>
+        </thead>
+        <tbody>
+          <tr data-dia="1"><td>Lunes</td><td colspan="2" class="cerrado">Cerrado</td></tr>
+          <tr data-dia="2"><td>Martes</td><td>12:00 - 15:00</td><td>18:00 - 22:30</td></tr>
+          <tr data-dia="3"><td>Miércoles</td><td>12:00 - 15:00</td><td>18:00 - 22:30</td></tr>
+          <tr data-dia="4"><td>Jueves</td><td>12:00 - 15:00</td><td>18:00 - 22:30</td></tr>
+          <tr data-dia="5"><td>Viernes</td><td>12:00 - 15:00</td><td>18:00 - 22:30</td></tr>
+          <tr data-dia="6"><td>Sábado</td><td>12:00 - 15:00</td><td>18:00 - 22:30</td></tr>
+          <tr data-dia="0"><td>Domingo</td><td>12:00 - 15:00</td><td class="cerrado">Cerrado</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="fotos">
+      <h2>Fotos</h2>
+      <div class="galeria">
+        <div class="foto pendiente">[PENDIENTE: foto del local]</div>
+        <div class="foto pendiente">[PENDIENTE: foto de los pinchos]</div>
+        <div class="foto pendiente">[PENDIENTE: foto de la barra o terraza]</div>
+      </div>
+    </section>
+
+    <section id="donde">
+      <h2>Dónde estamos</h2>
+      <p>Portugalete, en la zona de Repelega.</p>
+      <p class="pendiente">[PENDIENTE: dirección exacta]</p>
+      <p class="pendiente">[PENDIENTE: teléfono]</p>
+      <p class="pendiente">[PENDIENTE: Instagram u otra red social]</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Chiringuito · Portugalete</p>
+    <p>© <span id="anio"></span></p>
+  </footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
