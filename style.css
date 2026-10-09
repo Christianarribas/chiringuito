@@ -1,0 +1,81 @@
+/* Estilo tradicional. Colores en un solo sitio: cambia aquí y cambia toda la página */
+.chiringuito {
+  --madera: #4a2c17;
+  --madera-clara: #7a4b27;
+  --crema: #f6ecd9;
+  --papel: #fffaf0;
+  --vino: #7b1e2b;
+  --dorado: #b8892e;
+  --texto: #2b1a0f;
+  --gris: #7a6a5a;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--crema);
+  color: var(--texto);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+.chiringuito * { box-sizing: border-box; }
+
+/* Cabecera */
+.hero {
+  background: var(--madera);
+  background-image: repeating-linear-gradient(90deg, rgba(0,0,0,0.12) 0 2px, transparent 2px 46px);
+  color: var(--crema);
+  text-align: center;
+  padding: 56px 20px 48px;
+  border-bottom: 6px double var(--dorado);
+}
+.hero-kicker { margin: 0; letter-spacing: 4px; text-transform: uppercase; font-size: 0.8rem; color: var(--dorado); }
+.hero h1 { margin: 10px 0 4px; font-size: 2.5rem; line-height: 1.1; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.hero-sub { margin: 0 0 16px; font-size: 1.2rem; font-style: italic; }
+.estado { display: inline-block; margin: 0 0 20px; padding: 5px 16px; border: 1px solid var(--dorado); font-style: normal; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 0.8rem; }
+.estado:empty { display: none; }
+.estado.abierto { background: #3e6b3a; color: #fff; }
+.estado.cerrado-ahora { background: var(--vino); color: #fff; }
+.boton { display: block; width: fit-content; margin: 0 auto; padding: 11px 26px; background: var(--vino); color: var(--crema); text-decoration: none; font-weight: 700; letter-spacing: 1px; border: 1px solid var(--dorado); }
+
+/* Menú de secciones */
+.menu { position: sticky; top: 0; z-index: 10; display: flex; justify-content: center; flex-wrap: wrap; gap: 2px 18px; padding: 8px 12px; background: var(--papel); border-bottom: 1px solid var(--dorado); }
+.menu a { padding: 10px 6px; color: var(--madera); text-decoration: none; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 0.85rem; }
+
+/* Secciones */
+main { max-width: 860px; margin: 0 auto; padding: 8px 20px 24px; }
+section { padding: 28px 0 8px; }
+h2 { margin: 0 0 18px; color: var(--vino); font-size: 1.8rem; text-align: center; font-weight: 700; }
+h2::after { content: ""; display: block; width: 90px; margin: 8px auto 0; border-top: 3px double var(--dorado); }
+h3 { margin: 0 0 8px; font-size: 1.3rem; color: var(--madera); }
+
+/* Carta */
+.tarjetas { display: flex; flex-direction: column; gap: 16px; }
+.tarjeta { background: var(--papel); padding: 18px; border: 1px solid var(--dorado); outline: 1px solid var(--dorado); outline-offset: -7px; }
+.tarjeta h3 { text-align: center; text-transform: uppercase; letter-spacing: 2px; font-size: 1.1rem; }
+
+/* Horario */
+.tabla-horario { width: 100%; border-collapse: collapse; background: var(--papel); border: 1px solid var(--madera-clara); }
+.tabla-horario th, .tabla-horario td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e5d6b8; font-size: 0.95rem; }
+.tabla-horario th { background: var(--madera); color: var(--crema); letter-spacing: 1px; }
+.tabla-horario tr.hoy td { background: #f0dca8; font-weight: 700; }
+.cerrado { color: var(--gris); font-style: italic; }
+
+/* Fotos */
+.galeria { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.foto { min-height: 160px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 12px; }
+.foto img { width: 100%; height: auto; display: block; border: 6px solid var(--papel); box-shadow: 0 1px 6px rgba(0,0,0,0.3); }
+
+/* Marcas de "falta este dato" */
+.pendiente { color: #6b4a00; background: #fbefc4; border: 1px dashed var(--dorado); padding: 8px 12px; font-style: italic; }
+p.pendiente { margin: 8px 0; }
+
+/* Pie */
+.pie { text-align: center; padding: 24px 20px 32px; background: var(--madera); color: var(--crema); border-top: 6px double var(--dorado); }
+.pie p { margin: 4px 0; }
+
+/* Pantallas más anchas */
+@media (min-width: 700px) {
+  .hero { padding: 90px 20px 70px; }
+  .hero h1 { font-size: 4.4rem; }
+  .tarjetas { flex-direction: row; }
+  .tarjeta { flex: 1; }
+  .galeria { grid-template-columns: repeat(3, 1fr); }
+}
